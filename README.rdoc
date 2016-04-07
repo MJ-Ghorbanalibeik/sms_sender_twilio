@@ -1,0 +1,6 @@
+= SmsSenderTwilio
+
+This project rocks and uses MIT-LICENSE.
+
+http api based on: 
+https://www.twilio.com/docs/api/rest
