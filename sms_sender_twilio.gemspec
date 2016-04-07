@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SmsSenderTwilio::VERSION
   s.authors     = ["Mojtaba Ghorbanalibeik", "Hossein Bukhamseen"]
   s.email       = ["mojtaba.ghorbanalibeik@gmail.com", "bukhamseen.h@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = ""
   s.summary     = "Send sms via api.twilio.com"
   s.description = "Send sms via api.twilio.com"
   s.license     = "MIT"
