@@ -1,6 +1,6 @@
 # SMS sender twilio
 
-
+[![Circle CI](https://circleci.com/gh/MJ-Ghorbanalibeik/sms_sender_twilio.svg?style=svg)](https://circleci.com/gh/MJ-Ghorbanalibeik/sms_sender_twilio)
 
 rails gem to send sms via https://api.twilio.com/2010-04-01
 
