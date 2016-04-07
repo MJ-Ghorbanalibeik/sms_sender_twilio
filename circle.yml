@@ -7,6 +7,7 @@ dependencies:
   pre:
     - gem install webmock
     - gem install dotenv
+    - gem install twilio-ruby
   override:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
 
@@ -15,5 +16,6 @@ test:
   override:
     - echo "mobile_number="$SMS_SENDER_TWILIO_MOBILE_NUMBER > .env
     - echo "sender="$SMS_SENDER_TWILIO_SENDER >> .env
-    - echo "appsid="$SMS_SENDER_TWILIO_APPSID >> .env
+    - echo "account_sid="$SMS_SENDER_TWILIO_ACCOUNT_SID >> .env
+    - echo "auth_token="$SMS_SENDER_TWILIO_AUTH_TOKEN >> .env
     - dotenv rake test
