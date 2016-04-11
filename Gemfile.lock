@@ -10,8 +10,8 @@ GIT
 PATH
   remote: .
   specs:
-    sms_sender_twilio (1.0.0)
-      rails (~> 4.2.5.1)
+    sms_sender_twilio (1.0.1)
+      rails
       twilio-ruby
 
 GEM
