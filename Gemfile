@@ -1,13 +1,4 @@
 source 'https://rubygems.org'
-# Add minimal gems to enable rake test
-group :test do
-  gem 'rails'
-  gem 'webmock', github: 'bblimke/webmock'
-  gem 'dotenv'
-end
-
-# Add twilio gem itself
-gem 'twilio-ruby'
 
 # Declare your gem's dependencies in sms_sender_twilio.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and

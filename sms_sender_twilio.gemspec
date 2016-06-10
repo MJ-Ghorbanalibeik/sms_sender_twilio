@@ -18,5 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails"
-  s.add_dependency "twilio-ruby"
+  s.add_dependency "webmock"
+  s.add_dependency "dotenv"
+  s.add_dependency "twilio-ruby", '~> 5.0.0.rc2'
 end
