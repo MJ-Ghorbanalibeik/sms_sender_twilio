@@ -11,12 +11,12 @@ module SmsSenderTwilio
     mobile_number_normalized = SmsSenderTwilio::Normalizer.normalize_number_e_164(mobile_number)
     sender_normalized = SmsSenderTwilio::Normalizer.normalize_number_e_164(sender)
     message_normalized = SmsSenderTwilio::Normalizer.normalize_message(message)
-    response = client(credentials).account.messages.create({
+    response = client(credentials).api.account.messages.create({
       :from => sender_normalized, 
       :to => mobile_number_normalized, 
       :body => message_normalized,
     })
-    if response.class == Twilio::REST::Message
+    if response.respond_to?(:sid)
       return { message_id: response.sid, code: 0 }
     else
       result = {error: response.error_message, code: error_code}

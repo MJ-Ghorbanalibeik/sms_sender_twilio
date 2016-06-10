@@ -8,4 +8,7 @@ http api based on:
 https://www.twilio.com/docs/api/rest
 
 Version log:
-  1.0.0: 
+
+  1.0.0: base version
+
+  1.1.0: upgrade twilio-ruby to version 5
