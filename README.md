@@ -12,3 +12,5 @@ Version log:
   1.0.0: base version
 
   1.1.0: upgrade twilio-ruby to version 5
+
+  1.2.0: use typhoeus as default http adaptor
