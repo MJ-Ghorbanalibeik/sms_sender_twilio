@@ -13,7 +13,7 @@ class SmsSenderTwilioTest < ActiveSupport::TestCase
     # Config webmock for sending messages 
     test_messages.each do |m|
       request_body_header = {:body => {'To' => SmsSenderTwilio::Normalizer.normalize_number_e_164(ENV['mobile_number']), 'From' => SmsSenderTwilio::Normalizer.normalize_number_e_164(ENV['sender']), 'Body' => SmsSenderTwilio::Normalizer.normalize_message(m)}, :headers => {'Accept'=>'application/json', 'Accept-Charset'=>'utf-8', 'Content-Type'=>'application/x-www-form-urlencoded'}}
-      WebMock::API.stub_request(:post, "https://#{ENV['account_sid']}:#{ENV['auth_token']}@api.twilio.com/2010-04-01/Accounts/#{ENV['account_sid']}/Messages.json").
+      WebMock::API.stub_request(:post, "https://api.twilio.com/2010-04-01/Accounts/#{ENV['account_sid']}/Messages.json").
         with(request_body_header).
         to_return(:status => 200, 
           :body => "{

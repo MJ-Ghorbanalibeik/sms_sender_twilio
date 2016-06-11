@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency "webmock"
   s.add_dependency "dotenv"
   s.add_dependency "twilio-ruby", '~> 5.0.0.rc2'
+  s.add_dependency "typhoeus"
 end

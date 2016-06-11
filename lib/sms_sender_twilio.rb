@@ -1,9 +1,12 @@
 require 'sms_sender_twilio/normalizer'
 require 'twilio-ruby'
+require 'typhoeus/adapters/faraday'
 
 module SmsSenderTwilio
   def self.client(credentials)
     @client ||= Twilio::REST::Client.new credentials['account_sid'], credentials['auth_token']
+    @client.http_client.adapter = :typhoeus
+    return @client
   end
 
   # According to documentation: 
